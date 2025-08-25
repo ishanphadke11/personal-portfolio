@@ -57,25 +57,33 @@ const Landing = ({ setSelectedPage}) => {
                     >
                     <div className="inline-flex rounded-sm overflow-hidden">
                         {/* Contact Me */}
-                        <AnchorLink
-                        href="#contact"
-                        onClick={() => setSelectedPage("contact")}
-                        className="rounded-sm bg-gradient-rainblue text-deep-blue py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
-                        aria-label="Contact Me"
-                        >
-                        Contact Me
-                        </AnchorLink>
+                        <motion.div
+                            className="flex mt-5 justify-center md:justify-start"
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.5 }}
+                            transition={{ delay: 0.2, duration: 0.5 }}
+                            variants={{ hidden: { opacity: 0, x: -50 }, visible: { opacity: 1, x: 0 } }}
+                            >
+                            <AnchorLink
+                                href="#contact"
+                                onClick={() => setSelectedPage("contact")}
+                                className="rounded-sm bg-gradient-rainblue text-deep-blue py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70 mr-4"
+                                aria-label="Contact Me"
+                            >
+                                Contact Me
+                            </AnchorLink>
 
+                            <a
+                                href="/resume.pdf"
+                                download
+                                className="rounded-sm bg-gradient-rainblue text-deep-blue py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+                                aria-label="Download Resume"
+                            >
+                                Download Resume
+                            </a>
+                            </motion.div>
 
-                        {/* Download Resume */}
-                        <a
-                        href="/resume.pdf"
-                        download
-                        className="rounded-sm bg-gradient-rainblue text-deep-blue py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
-                        aria-label="Download Resume"
-                        >
-                        Download Resume
-                        </a>
                     </div>
                     </motion.div>
 
