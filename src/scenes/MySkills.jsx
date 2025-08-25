@@ -112,7 +112,7 @@ const MySkills = () => {
         </motion.div>
 
         {/* GRID — two boxes per row on md+ */}
-        <div className="flex justify-center">
+        <div className="flex justify-center pb-20">
             <motion.div
             className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-8 px-6"
             initial="hidden"
