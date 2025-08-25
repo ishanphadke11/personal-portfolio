@@ -60,7 +60,7 @@ const Landing = ({ setSelectedPage}) => {
                         <AnchorLink
                         href="#contact"
                         onClick={() => setSelectedPage("contact")}
-                        className="bg-gradient-rainblue text-deep-blue py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+                        className="rounded-sm bg-gradient-rainblue text-deep-blue py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
                         aria-label="Contact Me"
                         >
                         Contact Me
@@ -70,7 +70,7 @@ const Landing = ({ setSelectedPage}) => {
                         <AnchorLink
                         href="#contact"
                         onClick={() => setSelectedPage("contact")}
-                        className="bg-deep-blue text-white py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+                        className="rounded-sm bg-deep-blue text-white py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
                         aria-label="Let's Talk"
                         >
                         Let&apos;s Talk.
@@ -80,7 +80,7 @@ const Landing = ({ setSelectedPage}) => {
                         <a
                         href="/resume.pdf"
                         download
-                        className="bg-gradient-rainblue text-deep-blue py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+                        className="rounded-sm bg-gradient-rainblue text-deep-blue py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
                         aria-label="Download Resume"
                         >
                         Download Resume
