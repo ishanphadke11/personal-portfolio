@@ -24,7 +24,7 @@ const projectVariant = {
 };
 
 // Project Component
-const Project = ({ title, image }) => {
+const Project = ({ title, image, description, url }) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500 
     bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
 
@@ -32,10 +32,10 @@ const Project = ({ title, image }) => {
     <motion.div variants={projectVariant} className="relative max-w-[400px] max-h-[400px]">
       <div className={overlayStyles}>
         <p className="text-2xl font-playfair">{title}</p>
-        <p className="mt-7">
-          kjhdiauhdiuhf fhoshfo psoihkfihos ohedofihol hslidhf. kggdfiuhf ioehfolg
-          fhofiehdflkn djmd.
-        </p>
+        <p className="mt-7 text-sm">{description}</p>
+        <a href="url" target="_blank" rel="noopener noreferrer" className="mt-4 underline text-blue-500 hover:text-blue-700">
+          Visit Project
+        </a>
       </div>
       <img src={image} alt={title} />
     </motion.div>
@@ -87,7 +87,9 @@ const Projects = () => {
             BEAUTIFUL USER INTERFACES
           </div>
 
-          <Project title="Project 1" image={project1} />
+          <Project title="2048" image={project1} description="A playable replica of the popular 2048 game written in base HTML CSS and JavaScript" 
+              url="https://ishanphadke11.github.io/2048.github.io/"/>
+              
           <Project title="Project 2" image={project2} />
           <Project title="Project 3" image={project3} />
           <Project title="Project 4" image={project4} />
