@@ -1,3 +1,4 @@
+// src/scenes/MySkills.jsx
 import React from "react";
 import { motion } from "framer-motion";
 import LineGradient from "../components/LineGradient";
@@ -15,13 +16,13 @@ import {
   SiFlask,
   SiGit,
   SiGithub,
-  SiVisualstudiocode,
   SiMysql,
   SiLinux,
   SiWindows,
   SiApple,
 } from "react-icons/si";
 import { IoNetworkOutline } from "react-icons/io5";
+import { VscVscode } from "react-icons/vsc";
 
 // === Motion Variants (consistent with Projects) ===
 const container = {
@@ -44,10 +45,7 @@ const SkillPill = ({ label, Icon, colorClass = "" }) => (
     className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-sm text-white hover:bg-white/20 transition"
   >
     {Icon && (
-      <Icon
-        aria-hidden="true"
-        className={`text-xl md:text-2xl ${colorClass}`}
-      />
+      <Icon aria-hidden="true" className={`text-xl md:text-2xl ${colorClass}`} />
     )}
     <span>{label}</span>
   </motion.span>
@@ -86,7 +84,7 @@ const SkillSection = ({ title, skills, accent = "red" }) => {
 };
 
 const MySkills = () => {
-  // NOTE: Using brand-ish colors; feel free to tweak to your palette
+  // Brand-ish colors; tweak to match your palette or Tailwind theme
   const languages = [
     { label: "HTML", Icon: SiHtml5, colorClass: "text-[#E34F26]" },
     { label: "CSS", Icon: SiCss3, colorClass: "text-[#1572B6]" },
@@ -105,7 +103,7 @@ const MySkills = () => {
   const devTools = [
     { label: "Git", Icon: SiGit, colorClass: "text-[#F05032]" },
     { label: "GitHub", Icon: SiGithub, colorClass: "text-white" },
-    { label: "VS Code", Icon: SiVisualstudiocode, colorClass: "text-[#007ACC]" },
+    { label: "VS Code", Icon: VscVscode, colorClass: "text-[#007ACC]" },
     { label: "MySQL", Icon: SiMysql, colorClass: "text-[#4479A1]" },
   ];
 
@@ -118,7 +116,7 @@ const MySkills = () => {
   ];
 
   return (
-    // spacing fix kept from last change
+    // Spacing fix: margin-bottom creates space after the section for the next LineGradient
     <section id="skills" className="pt-48 pb-48 mb-24 md:mb-32 relative">
       {/* HEADINGS */}
       <motion.div
