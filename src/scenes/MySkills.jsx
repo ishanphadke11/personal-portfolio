@@ -18,11 +18,11 @@ import {
   SiGithub,
   SiMysql,
   SiLinux,
-  SiWindows,
   SiApple,
 } from "react-icons/si";
-import { IoNetworkOutline } from "react-icons/io5";
 import { VscVscode } from "react-icons/vsc";
+import { FaWindows } from "react-icons/fa";
+import { IoNetworkOutline } from "react-icons/io5";
 
 // === Motion Variants (consistent with Projects) ===
 const container = {
@@ -110,7 +110,7 @@ const MySkills = () => {
   // Split OS into separate pills so each gets its own logo
   const other = [
     { label: "Linux", Icon: SiLinux, colorClass: "text-[#FCC624]" },
-    { label: "Windows", Icon: SiWindows, colorClass: "text-[#0078D4]" },
+    { label: "Windows", Icon: FaWindows, colorClass: "text-[#0078D4]" },
     { label: "macOS", Icon: SiApple, colorClass: "text-[#A2AAAD]" },
     { label: "TCP/IP Suite", Icon: IoNetworkOutline, colorClass: "text-teal-300" },
   ];
