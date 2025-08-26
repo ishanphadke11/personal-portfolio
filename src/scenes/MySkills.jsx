@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import LineGradient from "../components/LineGradient";
 
-// === Icons ===
+// === Icons (Simple Icons) ===
 import {
   SiHtml5,
   SiCss3,
@@ -20,9 +20,10 @@ import {
   SiLinux,
   SiApple,
 } from "react-icons/si";
+
+// === Icons (others to avoid missing exports on your version) ===
 import { VscVscode } from "react-icons/vsc";
-import { FaWindows } from "react-icons/fa";
-import { IoNetworkOutline } from "react-icons/io5";
+import { FaWindows, FaNetworkWired } from "react-icons/fa";
 
 // === Motion Variants (consistent with Projects) ===
 const container = {
@@ -112,7 +113,7 @@ const MySkills = () => {
     { label: "Linux", Icon: SiLinux, colorClass: "text-[#FCC624]" },
     { label: "Windows", Icon: FaWindows, colorClass: "text-[#0078D4]" },
     { label: "macOS", Icon: SiApple, colorClass: "text-[#A2AAAD]" },
-    { label: "TCP/IP Suite", Icon: IoNetworkOutline, colorClass: "text-teal-300" },
+    { label: "TCP/IP Suite", Icon: FaNetworkWired, colorClass: "text-teal-300" },
   ];
 
   return (
