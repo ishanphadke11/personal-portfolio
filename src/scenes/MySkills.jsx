@@ -2,6 +2,27 @@ import React from "react";
 import { motion } from "framer-motion";
 import LineGradient from "../components/LineGradient";
 
+// === Icons ===
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiC,
+  SiCplusplus,
+  SiPython,
+  SiReact,
+  SiTailwindcss,
+  SiFlask,
+  SiGit,
+  SiGithub,
+  SiVisualstudiocode,
+  SiMysql,
+  SiLinux,
+  SiWindows,
+  SiApple,
+} from "react-icons/si";
+import { IoNetworkOutline } from "react-icons/io5";
+
 // === Motion Variants (consistent with Projects) ===
 const container = {
   hidden: {},
@@ -15,13 +36,19 @@ const item = {
   visible: { opacity: 1, y: 0, scale: 1 },
 };
 
-// === Pill for each skill (white text) ===
-const SkillPill = ({ label, icon }) => (
+// === Pill for each skill (uses a React Icon) ===
+const SkillPill = ({ label, Icon, colorClass = "" }) => (
   <motion.span
     variants={item}
+    title={label}
     className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-sm text-white hover:bg-white/20 transition"
   >
-    {icon && <span className="text-base">{icon}</span>}
+    {Icon && (
+      <Icon
+        aria-hidden="true"
+        className={`text-xl md:text-2xl ${colorClass}`}
+      />
+    )}
     <span>{label}</span>
   </motion.span>
 );
@@ -41,7 +68,12 @@ const SkillSection = ({ title, skills, accent = "red" }) => {
       <div className="mt-5 flex flex-wrap gap-3">
         {skills?.length ? (
           skills.map((s, i) => (
-            <SkillPill key={`${title}-${i}`} label={s.label} icon={s.icon} />
+            <SkillPill
+              key={`${title}-${i}`}
+              label={s.label}
+              Icon={s.Icon}
+              colorClass={s.colorClass}
+            />
           ))
         ) : (
           <p className="text-sm text-white/70">
@@ -54,37 +86,40 @@ const SkillSection = ({ title, skills, accent = "red" }) => {
 };
 
 const MySkills = () => {
-  // Prototype data — tell me your real skills and I'll drop them in.
+  // NOTE: Using brand-ish colors; feel free to tweak to your palette
   const languages = [
-    { label: "HTML", icon: "💡" },
-    { label: "CSS", icon: "💡" },
-    { label: "JavaScript", icon: "💡" },
-    { label: "C", icon: "💡" },
-    { label: "C++", icon: "💡" },
-    { label: "Python", icon: "💡" },
+    { label: "HTML", Icon: SiHtml5, colorClass: "text-[#E34F26]" },
+    { label: "CSS", Icon: SiCss3, colorClass: "text-[#1572B6]" },
+    { label: "JavaScript", Icon: SiJavascript, colorClass: "text-[#F7DF1E]" },
+    { label: "C", Icon: SiC, colorClass: "text-[#A8B9CC]" },
+    { label: "C++", Icon: SiCplusplus, colorClass: "text-[#00599C]" },
+    { label: "Python", Icon: SiPython, colorClass: "text-[#3776AB]" },
   ];
 
   const frameworks = [
-    { label: "React JS", icon: "🧩" },
-    { label: "Tailwind CSS", icon: "🧩" },
-    { label: "Flask", icon: "🧩" },
+    { label: "React JS", Icon: SiReact, colorClass: "text-[#61DAFB]" },
+    { label: "Tailwind CSS", Icon: SiTailwindcss, colorClass: "text-[#06B6D4]" },
+    { label: "Flask", Icon: SiFlask, colorClass: "text-white" },
   ];
 
   const devTools = [
-    { label: "Git/Github", icon: "🛠️" },
-    { label: "VS Code", icon: "🛠️" },
-    { label: "MySQL", icon: "🛠️" },
+    { label: "Git", Icon: SiGit, colorClass: "text-[#F05032]" },
+    { label: "GitHub", Icon: SiGithub, colorClass: "text-white" },
+    { label: "VS Code", Icon: SiVisualstudiocode, colorClass: "text-[#007ACC]" },
+    { label: "MySQL", Icon: SiMysql, colorClass: "text-[#4479A1]" },
   ];
 
+  // Split OS into separate pills so each gets its own logo
   const other = [
-    { label: "Linux, Windows, MacOS", icon: "✨" },
-    { label: "TCP/IP Suite", icon: "✨" },
+    { label: "Linux", Icon: SiLinux, colorClass: "text-[#FCC624]" },
+    { label: "Windows", Icon: SiWindows, colorClass: "text-[#0078D4]" },
+    { label: "macOS", Icon: SiApple, colorClass: "text-[#A2AAAD]" },
+    { label: "TCP/IP Suite", Icon: IoNetworkOutline, colorClass: "text-teal-300" },
   ];
 
   return (
-    // 👇 Added `mb-24 md:mb-32` to create space after the section.
-    // 👇 Added `relative` to establish a stacking context (safe, helps if LineGradient is positioned).
-    <section id="skills" className="pt-48 pb-48 md:mb-32 relative">
+    // spacing fix kept from last change
+    <section id="skills" className="pt-48 pb-48 mb-24 md:mb-32 relative">
       {/* HEADINGS */}
       <motion.div
         className="md:w-2/4 mx-auto text-center"
