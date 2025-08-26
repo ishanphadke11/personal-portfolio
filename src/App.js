@@ -9,54 +9,78 @@ import LineGradient from "./components/LineGradient";
 import Contact from "./scenes/Contact";
 import Footer from "./scenes/Footer.jsx";
 
-
 function App() {
-  const [selectedPage, setSelectedPage] = useState('home');
+  const [selectedPage, setSelectedPage] = useState("home");
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
-  const [isTopOfPage, setIsTopOfPage] = useState(true)
+  const [isTopOfPage, setIsTopOfPage] = useState(true);
 
-  {/*useEffect hook to handle scrolling */}
+  // Scroll listener to detect current section
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY === 0) setIsTopOfPage(true);  {/*check posiion of y. if it is 0 we are at the top. otherwise we are not at the top */}
-      if (window.scrollY !== 0) setIsTopOfPage(false);
-    }
-    window.addEventListener("scroll", handleScroll); {/*add the handeScroll function as the "scroll" event listener */}
-    return () => window.removeEventListener("scroll", handleScroll); {/**remove the event listener when the component unmounts */}
-  }, [])
+      const sections = ["home", "skills", "projects", "contact"];
+      sections.forEach((section) => {
+        const element = document.getElementById(section);
+        if (element) {
+          const top = element.getBoundingClientRect().top;
+          const height = element.offsetHeight;
+          if (top <= window.innerHeight / 2 && top + height >= window.innerHeight / 2) {
+            setSelectedPage(section);
+          }
+        }
+      });
 
-  return <div className="app bg-deep-blue">
-    <Navbar 
-      selectedPage={selectedPage}
-      setSelectedPage={setSelectedPage}
-      isTopOfPage={isTopOfPage}
-    />
-    <div className="w-5/6 mx-auto md:h-full">
-      {isAboveMediumScreens && (
-        <DotGroup 
-          selectedPage={selectedPage}
-          setSelectedPage={setSelectedPage}
-        />
-      )}
-      <Landing setSelectedPage={setSelectedPage} />
-    </div>
-    <LineGradient />
-    <div className="w-5/6 mx-auto">
-      <MySkills />
-    </div>
+      setIsTopOfPage(window.scrollY === 0);
+    };
 
-    <LineGradient />
-    <div className="w-5/6 mx-auto">
-      <Projects />
-    </div>
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-    <LineGradient />
-    <div className="w-5/6 mx-auto">
-      <Contact />
-    </div>
+  return (
+    <div className="app bg-deep-blue">
+      <Navbar
+        selectedPage={selectedPage}
+        setSelectedPage={setSelectedPage}
+        isTopOfPage={isTopOfPage}
+      />
 
-    <Footer />
-  </div>
+      <div className="w-5/6 mx-auto md:h-full">
+        {isAboveMediumScreens && (
+          <DotGroup selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+        )}
+
+        <section id="home">
+          <Landing setSelectedPage={setSelectedPage} />
+        </section>
+      </div>
+
+      <LineGradient />
+
+      <div className="w-5/6 mx-auto">
+        <section id="skills">
+          <MySkills />
+        </section>
+      </div>
+
+      <LineGradient />
+
+      <div className="w-5/6 mx-auto">
+        <section id="projects">
+          <Projects />
+        </section>
+      </div>
+
+      <LineGradient />
+
+      <div className="w-5/6 mx-auto">
+        <section id="contact">
+          <Contact />
+        </section>
+      </div>
+
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
