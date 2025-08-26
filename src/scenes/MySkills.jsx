@@ -112,9 +112,9 @@ const MySkills = () => {
         </motion.div>
 
         {/* GRID — two boxes per row on md+ */}
-        <div className="flex justify-center pb-60">
+        <div className="flex justify-center">
             <motion.div
-            className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-8 px-6"
+            className="sm:grid sm:grid-cols-3 gap-8"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}

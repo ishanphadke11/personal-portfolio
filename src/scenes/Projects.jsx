@@ -33,7 +33,7 @@ const Project = ({ title, image, description, url }) => {
       <div className={overlayStyles}>
         <p className="text-2xl font-playfair">{title}</p>
         <p className="mt-7 text-sm">{description}</p>
-        <a href="url" target="_blank" rel="noopener noreferrer" className="mt-4 underline text-blue-500 hover:text-blue-700">
+        <a href={url} target="_blank" rel="noopener noreferrer" className="mt-4 underline text-blue-500 hover:text-blue-700">
           Visit Project
         </a>
       </div>
@@ -89,11 +89,15 @@ const Projects = () => {
 
           <Project title="2048" image={project1} description="A playable replica of the popular 2048 game written in base HTML CSS and JavaScript" 
               url="https://ishanphadke11.github.io/2048.github.io/"/>
-              
-          <Project title="Project 2" image={project2} />
-          <Project title="Project 3" image={project3} />
-          <Project title="Project 4" image={project4} />
-          <Project title="Project 5" image={project5} />
+
+          <Project title="Network Analysis" image={project2} description="A Network Analysis tool that parses pcap files and generates detailed reports in
+              CSV format containing key information for each network protocol including IPv4, TCP, UDP, HTTP, DNS and FTP" url="" />
+          <Project title="Trip Planner" image={project3} description="A full stack application that uses an LLM to generate a trip itinerary based on user inputs
+              such as Destination, start and end dates, mood, and interests" url=""/>
+          <Project title="Spotify Playlist Creator" image={project4} description="An application that uses an LLM and the Spotify API to generate a playlist in Spotify
+              based off a prompt given by the user." url=""/>
+          <Project title="Block Game" image={project5} description="A tetris like game where user has to line up blocks on a game grid to score points."
+              url="https://ishanphadke11.github.io/tetris.github.io/"/>
           <Project title="Project 6" image={project6} />
 
           <div className="flex justify-center text-center items-center p-10 bg-blue max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold">
