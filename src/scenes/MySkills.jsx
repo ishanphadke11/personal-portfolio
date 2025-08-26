@@ -84,7 +84,7 @@ const MySkills = () => {
   return (
     // 👇 Added `mb-24 md:mb-32` to create space after the section.
     // 👇 Added `relative` to establish a stacking context (safe, helps if LineGradient is positioned).
-    <section id="skills" className="pt-48 pb-48 mb-24 md:mb-32 relative">
+    <section id="skills" className="pt-48 pb-48 mb-20 md:mb-32 relative">
       {/* HEADINGS */}
       <motion.div
         className="md:w-2/4 mx-auto text-center"
