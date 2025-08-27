@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import logo_2048 from "../assets/2048_logo.png";
 import network from "../assets/network.png";
 import spotify from "../assets/spotify.png";
-import tetris from "../assets/tetris.png ";
+// import tetris from "../assets/tetris.png ";
 import project5 from "../assets/project-5.jpeg";
 import project6 from "../assets/project-6.jpeg";
 
@@ -96,7 +96,7 @@ const Projects = () => {
               such as Destination, start and end dates, mood, and interests" url=""/>
           <Project title="Spotify Playlist Creator" image={spotify} description="An application that uses an LLM and the Spotify API to generate a playlist in Spotify
               based off a prompt given by the user." url=""/>
-          <Project title="Block Game" image={tetris} description="A tetris like game where user has to line up blocks on a game grid to score points."
+          <Project title="Block Game" image={project5} description="A tetris like game where user has to line up blocks on a game grid to score points."
               url="https://ishanphadke11.github.io/tetris.github.io/"/>
           <Project title="Project 6" image={project6} />
 
