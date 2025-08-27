@@ -9,7 +9,7 @@ import spotify from "../assets/spotify.png";
 // import tetris from "../assets/tetris.png ";
 import project5 from "../assets/project-5.jpeg";
 import project6 from "../assets/project-6.jpeg";
-
+import f1 from "../assets/f1.png"
 // Variants
 const container = {
   hidden: {},
@@ -83,26 +83,28 @@ const Projects = () => {
           viewport={{ once: true, amount: 0.5 }}
           variants={container}
         >
-          <div className="flex justify-center text-center items-center p-10 bg-red max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold">
-            BEAUTIFUL USER INTERFACES
-          </div>
 
           <Project title="2048" image={logo_2048} description="A playable replica of the popular 2048 game written in base HTML CSS and JavaScript" 
               url="https://ishanphadke11.github.io/2048.github.io/"/>
 
           <Project title="Network Analysis" image={network} description="A Network Analysis tool that parses pcap files and generates detailed reports in
-              CSV format containing key information for each network protocol including IPv4, TCP, UDP, HTTP, DNS and FTP" url="" />
+              CSV format containing key information for each network protocol including IPv4, TCP, UDP, HTTP, DNS and FTP" url="https://github.com/ishanphadke11/NetworkAnalysis" />
           <Project title="Trip Planner" image={project5} description="A full stack application that uses an LLM to generate a trip itinerary based on user inputs
               such as Destination, start and end dates, mood, and interests" url=""/>
           <Project title="Spotify Playlist Creator" image={spotify} description="An application that uses an LLM and the Spotify API to generate a playlist in Spotify
-              based off a prompt given by the user." url=""/>
+              based off a prompt given by the user." url="https://github.com/ishanphadke11/playlist-creator"/>
           <Project title="Block Game" image={project5} description="A tetris like game where user has to line up blocks on a game grid to score points."
               url="https://ishanphadke11.github.io/tetris.github.io/"/>
-          <Project title="Project 6" image={project6} />
+          <Project title="SQL on CSV" image={project6} description="Tool that allows users to run SQL queries directly on CSV files" 
+              url="https://github.com/ishanphadke11/sql_csv"/>
+          <Project title="C++ Dataframe" image={project5} description="A replica of the Pandas python library in C++" 
+              url="https://github.com/ishanphadke11/data_frame/tree/main/data_frame"/>
+          <Project title="Watchdog" image={project6} description="A watchdog written in C++ to monitor different sample applications" 
+              url="https://github.com/ishanphadke11/watchdog"/>
+          <Project title="F1 Fantasy" image={f1} description="A reinforcement learning model to create the best possible team for F1 Fantasy"
+              url="https://github.com/ishanphadke11/f1-fantasy" />
 
-          <div className="flex justify-center text-center items-center p-10 bg-blue max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold">
-            SMOOTH USER EXPERIENCE
-          </div>
+
         </motion.div>
       </div>
     </section>
