@@ -3,10 +3,10 @@ import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
 
 // Import your project images
-import project1 from "../assets/project-1.jpeg";
-import project2 from "../assets/project-2.jpeg";
-import project3 from "../assets/project-3.jpeg";
-import project4 from "../assets/project-4.jpeg";
+import logo_2048 from "../assets/2048_logo.png";
+import network from "../assets/network.png";
+import spotify from "../assets/spotify.png";
+import tetris from "../assets/tetris.png ";
 import project5 from "../assets/project-5.jpeg";
 import project6 from "../assets/project-6.jpeg";
 
@@ -87,16 +87,16 @@ const Projects = () => {
             BEAUTIFUL USER INTERFACES
           </div>
 
-          <Project title="2048" image={project1} description="A playable replica of the popular 2048 game written in base HTML CSS and JavaScript" 
+          <Project title="2048" image={logo_2048} description="A playable replica of the popular 2048 game written in base HTML CSS and JavaScript" 
               url="https://ishanphadke11.github.io/2048.github.io/"/>
 
-          <Project title="Network Analysis" image={project2} description="A Network Analysis tool that parses pcap files and generates detailed reports in
+          <Project title="Network Analysis" image={network} description="A Network Analysis tool that parses pcap files and generates detailed reports in
               CSV format containing key information for each network protocol including IPv4, TCP, UDP, HTTP, DNS and FTP" url="" />
-          <Project title="Trip Planner" image={project3} description="A full stack application that uses an LLM to generate a trip itinerary based on user inputs
+          <Project title="Trip Planner" image={project5} description="A full stack application that uses an LLM to generate a trip itinerary based on user inputs
               such as Destination, start and end dates, mood, and interests" url=""/>
-          <Project title="Spotify Playlist Creator" image={project4} description="An application that uses an LLM and the Spotify API to generate a playlist in Spotify
+          <Project title="Spotify Playlist Creator" image={spotify} description="An application that uses an LLM and the Spotify API to generate a playlist in Spotify
               based off a prompt given by the user." url=""/>
-          <Project title="Block Game" image={project5} description="A tetris like game where user has to line up blocks on a game grid to score points."
+          <Project title="Block Game" image={tetris} description="A tetris like game where user has to line up blocks on a game grid to score points."
               url="https://ishanphadke11.github.io/tetris.github.io/"/>
           <Project title="Project 6" image={project6} />
 
