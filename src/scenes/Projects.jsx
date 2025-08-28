@@ -9,6 +9,7 @@ import spotify from "../assets/spotify.png";
 // import tetris from "../assets/tetris.png ";
 import project5 from "../assets/project-5.jpeg";
 import project6 from "../assets/project-6.jpeg";
+import sql_csv from "../assets/sql-csv.png";
 import f1 from "../assets/f1.png"
 // Variants
 const container = {
@@ -95,7 +96,7 @@ const Projects = () => {
               based off a prompt given by the user." url="https://github.com/ishanphadke11/playlist-creator"/>
           <Project title="Block Game" image={project5} description="A tetris like game where user has to line up blocks on a game grid to score points."
               url="https://ishanphadke11.github.io/tetris.github.io/"/>
-          <Project title="SQL on CSV" image={project6} description="Tool that allows users to run SQL queries directly on CSV files" 
+          <Project title="SQL on CSV" image={sql_csv} description="Tool that allows users to run SQL queries directly on CSV files" 
               url="https://github.com/ishanphadke11/sql_csv"/>
           <Project title="C++ Dataframe" image={project5} description="A replica of the Pandas python library in C++" 
               url="https://github.com/ishanphadke11/data_frame/tree/main/data_frame"/>
