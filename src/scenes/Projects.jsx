@@ -8,7 +8,7 @@ import network from "../assets/network.png";
 import spotify from "../assets/spotify.png";
 // import tetris from "../assets/tetris.png ";
 import project5 from "../assets/project-5.jpeg";
-import project6 from "../assets/project-6.jpeg";
+import tetris from "../assets/tetris.png";
 import sql_csv from "../assets/sql-csv.png";
 import f1 from "../assets/f1.png";
 import dataframe from "../assets/dataframe.png";
@@ -97,7 +97,7 @@ const Projects = () => {
               such as Destination, start and end dates, mood, and interests" url=""/>
           <Project title="Spotify Playlist Creator" image={spotify} description="An application that uses an LLM and the Spotify API to generate a playlist in Spotify
               based off a prompt given by the user." url="https://github.com/ishanphadke11/playlist-creator"/>
-          <Project title="Block Game" image={project5} description="A tetris like game where user has to line up blocks on a game grid to score points."
+          <Project title="Block Game" image={tetris} description="A tetris like game where user has to line up blocks on a game grid to score points."
               url="https://ishanphadke11.github.io/tetris.github.io/"/>
           <Project title="SQL on CSV" image={sql_csv} description="Tool that allows users to run SQL queries directly on CSV files" 
               url="https://github.com/ishanphadke11/sql_csv"/>
