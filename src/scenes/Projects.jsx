@@ -12,6 +12,7 @@ import project6 from "../assets/project-6.jpeg";
 import sql_csv from "../assets/sql-csv.png";
 import f1 from "../assets/f1.png";
 import dataframe from "../assets/dataframe.png";
+import watchdog from "../assets/watchdog.png";
 
 // Variants
 const container = {
@@ -102,7 +103,7 @@ const Projects = () => {
               url="https://github.com/ishanphadke11/sql_csv"/>
           <Project title="C++ Dataframe" image={dataframe} description="A replica of the Pandas python library in C++" 
               url="https://github.com/ishanphadke11/data_frame/tree/main/data_frame"/>
-          <Project title="Watchdog" image={project6} description="A watchdog written in C++ to monitor different sample applications" 
+          <Project title="Watchdog" image={watchdog} description="A watchdog written in C++ to monitor different sample applications" 
               url="https://github.com/ishanphadke11/watchdog"/>
           <Project title="F1 Fantasy" image={f1} description="A reinforcement learning model to create the best possible team for F1 Fantasy"
               url="https://github.com/ishanphadke11/f1-fantasy" />
