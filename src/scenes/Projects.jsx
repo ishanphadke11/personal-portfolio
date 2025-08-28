@@ -10,7 +10,9 @@ import spotify from "../assets/spotify.png";
 import project5 from "../assets/project-5.jpeg";
 import project6 from "../assets/project-6.jpeg";
 import sql_csv from "../assets/sql-csv.png";
-import f1 from "../assets/f1.png"
+import f1 from "../assets/f1.png";
+import dataframe from "../assets/dataframe.png";
+
 // Variants
 const container = {
   hidden: {},
@@ -98,7 +100,7 @@ const Projects = () => {
               url="https://ishanphadke11.github.io/tetris.github.io/"/>
           <Project title="SQL on CSV" image={sql_csv} description="Tool that allows users to run SQL queries directly on CSV files" 
               url="https://github.com/ishanphadke11/sql_csv"/>
-          <Project title="C++ Dataframe" image={project5} description="A replica of the Pandas python library in C++" 
+          <Project title="C++ Dataframe" image={dataframe} description="A replica of the Pandas python library in C++" 
               url="https://github.com/ishanphadke11/data_frame/tree/main/data_frame"/>
           <Project title="Watchdog" image={project6} description="A watchdog written in C++ to monitor different sample applications" 
               url="https://github.com/ishanphadke11/watchdog"/>
