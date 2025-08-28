@@ -141,8 +141,7 @@ const MySkills = () => {
         </div>
 
         <p className="mt-10 mb-10">
-          A snapshot of the technologies and tools I use to design, build, and ship
-          products.
+          Some of the languages and tools that I like to work with.
         </p>
       </motion.div>
 
