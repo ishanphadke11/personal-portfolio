@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import profileImage from "../assets/ishan-portfolio.png";
 import SocialMediaIcons from "../components/SocialMediaIcons"
+import resume from "../assets/Resume.pdf"
 
 
 const Landing = ({ setSelectedPage}) => {
@@ -75,7 +76,7 @@ const Landing = ({ setSelectedPage}) => {
                             </AnchorLink>
 
                             <a
-                                href="/resume.pdf"
+                                href={resume}
                                 download
                                 className="rounded-sm bg-gradient-rainblue text-deep-blue py-3 px-7 font-semibold hover:bg-blue hover:text-white transition duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
                                 aria-label="Download Resume"
