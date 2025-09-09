@@ -8,7 +8,10 @@ import network from "../assets/network.png";
 import spotify from "../assets/spotify.png";
 // import tetris from "../assets/tetris.png ";
 import trip_planner from "../assets/trip_planner.png";
-import project6 from "../assets/project-6.jpeg";
+import watchdog from "../assets/watchdog.png";
+import dataframe from "../assets/dataframe.png";
+import tetris from "../assets/tetris.png";
+import sql_csv from "../assets/sql-csv.png"
 import f1 from "../assets/f1.png"
 // Variants
 const container = {
@@ -96,13 +99,13 @@ const Projects = () => {
               url="https://ishanphadke11.github.io/2048.github.io/"/>
 
           
-          <Project title="Block Game" image={project5} description="A tetris like game where user has to line up blocks on a game grid to score points."
+          <Project title="Block Game" image={tetris} description="A tetris like game where user has to line up blocks on a game grid to score points."
               url="https://ishanphadke11.github.io/tetris.github.io/"/>
-          <Project title="SQL on CSV" image={project6} description="Tool that allows users to run SQL queries directly on CSV files" 
+          <Project title="SQL on CSV" image={sql_csv} description="Tool that allows users to run SQL queries directly on CSV files" 
               url="https://github.com/ishanphadke11/sql_csv"/>
-          <Project title="C++ Dataframe" image={project5} description="A replica of the Pandas python library in C++" 
+          <Project title="C++ Dataframe" image={dataframe} description="A replica of the Pandas python library in C++" 
               url="https://github.com/ishanphadke11/data_frame/tree/main/data_frame"/>
-          <Project title="Watchdog" image={project6} description="A watchdog written in C++ to monitor different sample applications" 
+          <Project title="Watchdog" image={watchdog} description="A watchdog written in C++ to monitor different sample applications" 
               url="https://github.com/ishanphadke11/watchdog"/>
           <Project title="F1 Fantasy" image={f1} description="A reinforcement learning model to create the best possible team for F1 Fantasy"
               url="https://github.com/ishanphadke11/f1-fantasy" />
