@@ -3,8 +3,8 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import profileImage from "../assets/ishan-portfolio.png";
-import SocialMediaIcons from "../components/SocialMediaIcons"
-import resume from "../assets/Resume.pdf"
+import SocialMediaIcons from "../components/SocialMediaIcons";
+import resume from "../assets/Resume.pdf";
 
 
 const Landing = ({ setSelectedPage}) => {
