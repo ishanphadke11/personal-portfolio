@@ -71,9 +71,7 @@ const Projects = () => {
         </div>
 
         <p className="mt-10 mb-10">
-          jkjhsdkhfkshauikauhksdhkuhikhnkfdjhdkjhff oeifoif fjhlfire fhlfid.
-          jdeyjgyudgud hdkuheyihd ioshydouhnj alidhyoeawhiy dfokdyhoid.
-          kwegiuhg fdiowueghdiouhgeyi dfowehfyoiehfo woiwhedfoh.
+          A collection of some of the projects I have worked on over the past 3 years.
         </p>
       </motion.div>
 
