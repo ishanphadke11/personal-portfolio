@@ -92,6 +92,18 @@ const Projects = () => {
             
           <Project title="Spotify Playlist Creator" image={spotify} description="An application that uses an LLM and the Spotify API to generate a playlist in Spotify
               based off a prompt given by the user." url="https://github.com/ishanphadke11/playlist-creator"/>
+
+          <Project title="Watchdog" image={watchdog} description="A watchdog written in C++ to monitor different sample applications" 
+              url="https://github.com/ishanphadke11/watchdog"/>
+
+          <Project title="F1 Fantasy" image={f1} description="A reinforcement learning model to create the best possible team for F1 Fantasy"
+              url="https://github.com/ishanphadke11/f1-fantasy" />
+
+          <Project title="C++ Dataframe" image={dataframe} description="A replica of the Pandas python library in C++" 
+              url="https://github.com/ishanphadke11/data_frame/tree/main/data_frame"/>
+
+          <Project title="SQL on CSV" image={sql_csv} description="Tool that allows users to run SQL queries directly on CSV files" 
+              url="https://github.com/ishanphadke11/sql_csv"/>
           
           <Project title="2048" image={logo_2048} description="A playable replica of the popular 2048 game written in base HTML CSS and JavaScript" 
               url="https://ishanphadke11.github.io/2048.github.io/"/>
@@ -99,14 +111,9 @@ const Projects = () => {
           
           <Project title="Block Game" image={tetris} description="A tetris like game where user has to line up blocks on a game grid to score points."
               url="https://ishanphadke11.github.io/tetris.github.io/"/>
-          <Project title="SQL on CSV" image={sql_csv} description="Tool that allows users to run SQL queries directly on CSV files" 
-              url="https://github.com/ishanphadke11/sql_csv"/>
-          <Project title="C++ Dataframe" image={dataframe} description="A replica of the Pandas python library in C++" 
-              url="https://github.com/ishanphadke11/data_frame/tree/main/data_frame"/>
-          <Project title="Watchdog" image={watchdog} description="A watchdog written in C++ to monitor different sample applications" 
-              url="https://github.com/ishanphadke11/watchdog"/>
-          <Project title="F1 Fantasy" image={f1} description="A reinforcement learning model to create the best possible team for F1 Fantasy"
-              url="https://github.com/ishanphadke11/f1-fantasy" />
+          
+          
+          
 
 
         </motion.div>
